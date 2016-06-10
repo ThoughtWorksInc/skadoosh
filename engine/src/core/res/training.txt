@@ -1,13 +1,13 @@
-How are you?|personal
-What's my account balance?|account_balance
-Is this Barclays bank?|general_bank
-Where are you located?|location
-What service you provide?|services
-What are the bank open timings?|general_bank
-How do I apply for a loan?|loan
-How do I apply for a car loan?|loan
-How do I apply for a home loan?|loan
-How do I apply for a account?|general_bank
-How do I open an account?|general_bank
-Do you provide credit cards?|credit_card
-What type of credit cards you give?|credit_card
+How are you?|personal|I'm fine sir. How you do?
+What's my account balance?|account_balance|Your account balance is %(balance).2f
+Is this Barclays bank?|general_bank|Yes, this is Barclays!
+Where are you located?|location|USA
+What service you provide?|services|Credit card loan
+What are the bank open timings?|general_bank| 8AM to 7 PM on all weekdays except public holidays.
+How do I apply for a loan?|loan|Kindly go through this link
+How do I apply for a car loan?|loan|Kindly go through this link
+How do I apply for a home loan?|loan|Kindly go through this link
+How do I apply for a account?|general_bank|Kindly go through this link
+How do I open an account?|general_bank|Kindly go through this link
+Do you provide credit cards?|credit_card|Yes sir, we provide credit cards.
+What type of credit cards you give?|credit_card|Silver, Gold, Platinum
