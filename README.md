@@ -34,8 +34,13 @@ python -m nltk.downloader all
 
 ### Running the engine api ###
 ```
-chmod +x run_api.sh
-./run_api.sh
+chmod +x run.sh
+./run.sh
+```
+*Integration Tests*
+```
+chmod +x tests.sh
+./tests.sh
 ```
 
 ### Sample interactions ###
