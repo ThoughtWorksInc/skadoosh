@@ -1,2 +1,2 @@
 #!/bin/sh
-python engine/src/test/__init__.py
+python -m unittest discover -s engine/src/test/ -p *_test.py -v
