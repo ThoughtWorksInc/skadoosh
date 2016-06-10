@@ -1,0 +1,13 @@
+How are you?|personal
+What's my account balance?|account_balance
+Is this Barclays bank?|general_bank
+Where are you located?|location
+What service you provide?|services
+What are the bank open timings?|general_bank
+How do I apply for a loan?|loan
+How do I apply for a car loan?|loan
+How do I apply for a home loan?|loan
+How do I apply for a account?|general_bank
+How do I open an account?|general_bank
+Do you provide credit cards?|credit_card
+What type of credit cards you give?|credit_card
