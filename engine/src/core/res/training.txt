@@ -11,3 +11,8 @@ How do I apply for a account?|general_bank|Kindly go through this link
 How do I open an account?|general_bank|Kindly go through this link
 Do you provide credit cards?|credit_card|Yes sir, we provide credit cards.
 What type of credit cards you give?|credit_card|Silver, Gold, Platinum
+what is my name?|personal|your name is %(name)s
+tell me my account name?|personal|your name is %(name)s
+tell me my account number?|personal|your account nummber is %(account_no)s
+what is my account number?|personal|your account nummber is %(account_no)s
+what is my phone number?|personal|your phone nummber is %(phone)s
