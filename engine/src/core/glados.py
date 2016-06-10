@@ -3,11 +3,14 @@ import sys
 import os
 import csv
 import argparse
+from core.utils import *
 
 CURR_PATH = os.path.dirname(__file__)
 
 class Glados(object):
-  def __init__(self,traning_filename='res/training.txt',test_filename=None):
+  def __init__(self,traning_filename=None,test_filename=None):
+    if isEmpty(traning_filename):
+      traning_filename = os.path.join(CURR_PATH, 'res/training.txt')
     self.traning_filename = traning_filename
     self.test_filename = test_filename
     self.classifier = self.train_and_get_classifer(traning_filename)
@@ -17,7 +20,7 @@ class Glados(object):
   input: user question text
   output: answer
   """
-  def classify(self, text):
+  def get_help(self, text):
       return self.classifier.classify(self.extract_feature(text))
       
   def train_and_get_classifer(self, training_set_filename):
