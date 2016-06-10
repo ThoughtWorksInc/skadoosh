@@ -30,6 +30,12 @@ cd skadoosh
 [[ -z $VIRTUAL_ENV ]] && workon skadoosh
 pip install -r engine/src/requirements.txt
 python -m nltk.downloader all
+touch engine/src/api/application.cfg
+```
+Enter the below 2 lines in *application.cfg* file (donot forget to modify the SECRET_KEY value :P)
+```
+SECRET_KEY   = "some secret key[edit]"
+MONGO_DBNAME = "skadooshCoreDb"
 ```
 
 ### Running the engine api ###
@@ -37,6 +43,12 @@ python -m nltk.downloader all
 chmod +x run.sh
 ./run.sh
 ```
+Let this terminal and open a new terminal tab/session
+navigate to repo directory and do a `workon skadoosh`
+
+Note: Whenever you want to run the app in new terminal tab/session
+you need to execute once `workon skadoosh`
+
 *Integration Tests*
 ```
 chmod +x tests.sh
