@@ -45,7 +45,7 @@ chmod +x tests.sh
 
 ### Sample interactions ###
 ```
-curl "http://localhost:4000/api/help/What's my account balance?"
+curl "http://localhost:4000/api/help" -d text="what's my account balance?"
 ```
 
 ### Training Model ###
