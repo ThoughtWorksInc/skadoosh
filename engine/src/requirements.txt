@@ -1,0 +1,4 @@
+nltk
+requests
+flask
+numpy
