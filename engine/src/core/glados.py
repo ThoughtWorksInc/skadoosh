@@ -40,4 +40,5 @@ if __name__ == '__main__':
   train_set = features
   classifier = nltk.NaiveBayesClassifier.train(train_set)
   print(classifier.classify(extract_feature('Tell my account balance.')))
+  print(classifier.show_most_informative_features(5))
   
