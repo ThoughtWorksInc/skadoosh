@@ -1,3 +1,7 @@
+from gevent import monkey, spawn
+async_mode = 'gevent'
+monkey.patch_all()
+
 import os
 import json
 from bson import json_util
@@ -147,8 +151,10 @@ def home():
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-from api.resources.help import HelpApi
+from api.resources.help import HelpApi, response_consumer
 from api.resources.analytics import AnalyticsApi
 
 api.add_resource(HelpApi, '/api/help')
 api.add_resource(AnalyticsApi, '/api/analytics')
+
+spawn(response_consumer)
