@@ -8,3 +8,5 @@ skadoosh.iml
 engine/src/core/res/accuracy.txt
 
 skin/web/node_modules/*
+skin/web/app/bower_components/*
+pb-java/*
