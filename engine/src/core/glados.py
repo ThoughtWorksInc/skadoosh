@@ -20,7 +20,7 @@ class Glados(object):
 
     self.data_filename = data_filename
     self.classifier = self.train_and_get_classifer(data_filename)
-  
+
   """
   Public api
   input: user question text
@@ -34,12 +34,15 @@ class Glados(object):
     return response
       
   def train_and_get_classifer(self, data_filename):
+
+    split_ratio = 0.8
+
     data = self.get_content(data_filename)
     data_set = self.extract_feature_from_doc(data)
     random.shuffle(data_set)
     data_length = len(data)
 
-    train_split = int(data_length*0.8)
+    train_split = int(data_length * split_ratio)
     training_data = data_set[:train_split]
     test_data = data_set[train_split:]
 
@@ -59,7 +62,7 @@ class Glados(object):
     output_file.close()
 
     return classifier
-    
+
   def extract_feature_from_doc(self, document):
     features = []
     for (text,category,answer) in document:
@@ -106,7 +109,7 @@ def scanArgs():
   parser.add_argument('-d', '--debug', action='store_true', help='Enable debug log output')
   args = parser.parse_args()
   DEBUG = args.debug
-  
+
 if __name__ == '__main__':
   scanArgs()
   account_info = {
@@ -115,7 +118,7 @@ if __name__ == '__main__':
     'account_no': 12900989124,
     'phone': 73710203
   }
-  
+
   glados = Glados()
   ans = glados.get_help('Tell my account balance.')
   if len(ans) > 0:
@@ -124,4 +127,3 @@ if __name__ == '__main__':
     print("Unable to understand your request. Please try again")
   # print(classifier.show_most_informative_features(5))
   print(glados.get_help('what different credit cards you provide?'))
-  
