@@ -63,3 +63,18 @@ curl "http://localhost:4000/api/help" -d text="what's my account balance?"
 ### Training Model ###
 
 Soon...
+
+
+### FOR UI ###
+
+### Requirements ###
+* node (brew install node)
+* npm
+* grunt cli(npm install -g grunt-cli.)
+* bower(brew install bower)
+
+go to directory skadoosh/skin/web/
+```
+grunt serve
+
+```
