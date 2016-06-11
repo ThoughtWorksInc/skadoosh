@@ -46,6 +46,7 @@ users = {
 
 @auth.verify_password
 def verify_password(email, password):
+  print(email, password)
   if not email in users:
     user = verify_auth_token(email)
     if user:
@@ -78,6 +79,10 @@ def verify_auth_token(token):
 def get_auth_token():
   token = generate_auth_token(g.user)
   return json.dumps({ 'token': token.decode('ascii') })
+
+@auth.error_handler
+def unauthorized():
+  return make_response(json.dumps({'error': 'Unauthorized access'}), 401)
 
 @app.route('/secured')
 @auth.login_required

@@ -1,6 +1,7 @@
 from datetime import datetime
 from flask import g, request
 from flask_restful import Resource, reqparse
+from api import auth
 
 from core.glados import Glados
 from core.utils import *
@@ -21,6 +22,7 @@ parser = reqparse.RequestParser()
 parser.add_argument('text',required=False,type=str)
 
 class HelpApi(Resource):
+  # method_decorators = [auth.login_required]
   def post(self):
     args = parser.parse_args()
     input_text = args['text']
