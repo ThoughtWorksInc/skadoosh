@@ -48,9 +48,9 @@ class Glados(object):
 
     log('\n'.join([str(x) for x in data_set]))
 
-    classifier, classifier_name, test_set_accuracy, training_set_accuracy = self.train_using_naive_bayes(training_data, test_data)
+    classifier, classifier_name, test_set_accuracy, training_set_accuracy = self.train_using_decision_tree(training_data, test_data)
 
-    
+
     # print(classifier.most_informative_features())
 
     output_file = open(os.path.join(CURR_PATH,"res/accuracy.txt"), "a")
@@ -61,6 +61,13 @@ class Glados(object):
 
   def train_using_naive_bayes(self, training_data, test_data):
       classifier = nltk.NaiveBayesClassifier.train(training_data)
+      classifier_name = type(classifier).__name__
+      training_set_accuracy = nltk.classify.accuracy(classifier, training_data)
+      test_set_accuracy = nltk.classify.accuracy(classifier, test_data)
+      return classifier, classifier_name, test_set_accuracy, training_set_accuracy
+
+  def train_using_decision_tree(self, training_data, test_data):
+      classifier = nltk.classify.DecisionTreeClassifier.train(training_data, entropy_cutoff=0,support_cutoff=0)
       classifier_name = type(classifier).__name__
       training_set_accuracy = nltk.classify.accuracy(classifier, training_data)
       test_set_accuracy = nltk.classify.accuracy(classifier, test_data)
