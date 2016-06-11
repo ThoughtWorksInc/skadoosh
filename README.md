@@ -70,6 +70,7 @@ Soon...
 ### Requirements ###
 * node (brew install node)
 * npm
+* npm install --save pngquant-bin
 * grunt cli(npm install -g grunt-cli.)
 * bower(brew install bower)
 
