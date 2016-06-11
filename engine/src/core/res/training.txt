@@ -1,7 +1,21 @@
 Hello|Personal|Hi. How can I help you?
+Hello|Personal|Hi. How can I help you?
+Hello|Personal|Hi. How can I help you?
+Hi|Personal|Hello. How can I help you?
+Hi|Personal|Hello. How can I help you?
+Hi|Personal|Hello. How can I help you?
 Hi|Personal|Hello. How can I help you?
 How are you?|Personal|I'm fine! How are you?
+How are you?|Personal|I'm fine! How are you?
+How are you?|Personal|I'm fine! How are you?
+How are you?|Personal|I'm fine! How are you?
 what is my name?|Personal|your name is %(name)s
+what is my name?|Personal|your name is %(name)s
+tell me my name?|Personal|your name is %(name)s
+what is my name?|Personal|your name is %(name)s
+what is my phone number?|Personal|your phone number is %(phone)s
+what is my phone number?|Personal|your phone number is %(phone)s
+what is my phone number?|Personal|your phone number is %(phone)s
 what is my phone number?|Personal|your phone number is %(phone)s
 
 tell me my account name?|Account|your name is %(name)s
