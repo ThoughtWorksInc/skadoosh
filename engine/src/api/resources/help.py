@@ -11,7 +11,10 @@ test_account_info = {
   'name': 'John',
   'balance': 323710.38,
   'account_no': 12900989124,
-  'phone': 73710203
+  'phone': 73710203,
+  'reward_points':525,
+  'reward_points_expiring':200,
+  'reward_points_expiring_on': '15-09-2016'
 }
   
 parser = reqparse.RequestParser()
