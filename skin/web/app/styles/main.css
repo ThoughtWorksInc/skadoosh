@@ -1,0 +1,144 @@
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+
+.footer {
+    padding-top: 19px;
+    margin-top: 30px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+}
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+
+.marketing {
+    margin: 40px 0;
+}
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header {
+        margin-bottom: 30px;
+    }
+
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+
+
+/* CUSTOM CSS */
+
+#chat-history {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 350px;
+}
+
+#connection-error {
+    width: 40%;
+    margin: 10px auto 40px;
+    padding: 15px;
+    text-align: center;
+    background-color: #FFD0D0;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 11px;
+}
+
+#online-user-list {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 350px;
+    text-align: center;
+}
+
+.login-pane {
+    margin: 50px 0;
+}
+
+.login-pane .input-field {
+    text-align: right;
+}
+
+.login-pane .input-field input{
+    width: 80%;
+}
+
+.chat-bottom {
+
+}
+
+.chat-bottom .message {
+    width: 100%;
+}
+
+.chat-bottom .buttons {
+    text-align: right;
+}
+
+.chat-bottom .buttons .send-button {
+    width: 65%;
+}
+
+.chat-bottom .buttons .quit-button {
+    width: 30%;
+}

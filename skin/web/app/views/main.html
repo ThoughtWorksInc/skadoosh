@@ -1,0 +1,46 @@
+<!-- login pane -->
+<div ng-hide="chat.status.started">
+    <form name="loginForm" ng-submit="init()">
+        <div class="row login-pane">
+            <div class="span6 input-field">
+                <input ng-model="username" name="username" required type="text" placeholder="Your nick-name..">
+                <span class="error" ng-show="loginForm.username.$error.required"></span><br>
+            </div>
+            <div class="span3">
+                <input type="submit" class="btn btn-primary" ng-disabled="loginForm.username.$error.required" value="Start Chatting!" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- error message -->
+<div ng-show="chat.status.error" id="connection-error">
+    <strong>Error:</strong> {{chat.status.error}} <br/>
+    Please try again later..
+</div>
+
+<!-- chat room -->
+<div ng-show="chat.status.started">
+    <div class="span7">
+        <div class="row">
+            <div class="span7">
+                <textarea id="chat-history" ng-model="chat.data.history"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="chat-bottom">
+        <form name="sendForm" ng-submit="sendButtonClicked()">
+            <div class="span6">
+                <input class="message" ng-model="chat.data.messageText" name="messageText" type="text" placeholder="Type your message here..">
+            </div>
+            <div class="span3 buttons">
+                <input type="submit" class="btn btn-primary send-button" data-ng-disabled="chat.data.messageText == ''" value="Send!"/>
+                <input type="button" class="btn btn-danger quit-button" ng-click="quit()" value="Quit"/>
+            </div>
+        </form>
+    </div>
+    <div class="clearfix"></div>
+</div>
