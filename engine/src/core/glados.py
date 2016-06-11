@@ -4,6 +4,7 @@ import os
 import csv
 import argparse
 from nltk.stem.snowball import SnowballStemmer
+import random
 
 CURR_PATH = os.path.dirname(__file__)
 module_path = os.path.abspath(os.path.join(CURR_PATH, '..'))
@@ -12,15 +13,13 @@ sys.path.append(module_path)
 from core.utils import *
 
 class Glados(object):
-  def __init__(self,traning_filename=None,test_filename=None):
-    if isEmpty(traning_filename):
-      traning_filename = os.path.join(CURR_PATH, 'res/training.txt')
-    if isEmpty(test_filename):
-      test_filename = os.path.join(CURR_PATH, 'res/test_data.txt')
-    self.traning_filename = traning_filename
-    self.test_filename = test_filename
+  def __init__(self,data_filename=None):
     self.stemmer = SnowballStemmer("english")
-    self.classifier = self.train_and_get_classifer(traning_filename, test_filename)
+    if isEmpty(data_filename):
+      data_filename = os.path.join(CURR_PATH, 'res/training.txt')
+
+    self.data_filename = data_filename
+    self.classifier = self.train_and_get_classifer(data_filename)
   
   """
   Public api
@@ -34,24 +33,29 @@ class Glados(object):
     response = dict(question=question,answer=answer,probility=prob.prob(answer))
     return response
       
-  def train_and_get_classifer(self, training_set_filename, test_set_filename):
-    training_data = self.get_traning_content(training_set_filename)
-    train_set = self.extract_feature_from_doc(training_data)
-    training_data_length = len(training_data)
+  def train_and_get_classifer(self, data_filename):
+    data = self.get_content(data_filename)
+    data_set = self.extract_feature_from_doc(data)
+    random.shuffle(data_set)
+    data_length = len(data)
 
-    test_data = self.get_traning_content(test_set_filename)
-    test_set = self.extract_feature_from_doc(test_data)
+    train_split = int(data_length*0.8)
+    training_data = data_set[:train_split]
+    test_data = data_set[train_split:]
 
-    log('\n'.join([str(x) for x in train_set]))
+    print(len(training_data))
+    print(len(test_data))
 
-    classifier = nltk.NaiveBayesClassifier.train(train_set)
+    log('\n'.join([str(x) for x in data_set]))
+
+    classifier = nltk.NaiveBayesClassifier.train(training_data)
     classifier_name = type(classifier).__name__
-    training_set_accuracy = nltk.classify.accuracy(classifier, train_set)
-    test_set_accuracy = nltk.classify.accuracy(classifier, test_set)
+    training_set_accuracy = nltk.classify.accuracy(classifier, training_data)
+    test_set_accuracy = nltk.classify.accuracy(classifier, test_data)
     # print(classifier.most_informative_features())
 
     output_file = open(os.path.join(CURR_PATH,"res/accuracy.txt"), "a")
-    output_file.write("\n%s\t\t%s\t\t\t%.8f\t\t%.8f" % (classifier_name, training_data_length, training_set_accuracy, test_set_accuracy))
+    output_file.write("\n%s\t\t%s\t\t\t%.8f\t\t%.8f" % (classifier_name, data_length, training_set_accuracy, test_set_accuracy))
     output_file.close()
 
     return classifier
@@ -84,7 +88,7 @@ class Glados(object):
   def get_feature_set(self, sent_keys):
     return {'keywords': '|'.join(sent_keys)}
 
-  def get_traning_content(self, filename):
+  def get_content(self, filename):
     test_doc = os.path.join(filename)
     with open(test_doc, 'r') as content_file:
       lines = csv.reader(content_file,delimiter='|')
