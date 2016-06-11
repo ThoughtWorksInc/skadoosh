@@ -5,9 +5,13 @@ import csv
 import argparse
 from nltk.stem.snowball import SnowballStemmer
 import random
-# from nltk.classify import SklearnClassifier
-# from sklearn.naive_bayes import BernoulliNB
-# from sklearn.svm import SVC
+from nltk.classify import SklearnClassifier
+from sklearn.naive_bayes import BernoulliNB
+from sklearn.svm import SVC
+import string
+from nltk.tokenize import RegexpTokenizer
+from nltk.corpus import stopwords
+import re
 
 CURR_PATH = os.path.dirname(__file__)
 module_path = os.path.abspath(os.path.join(CURR_PATH, '..'))
@@ -33,7 +37,11 @@ class Glados(object):
     features = self.extract_feature(question)
     answer = self.classifier.classify(features)
     # prob = self.classifier.prob_classify(features)
-    response = dict(question=question,answer=answer,probility=0)
+    print("--------")
+    print(features)
+    print(features.values())
+    # print(dir(self.classifier.prob_classify(features)))
+    response = dict(question=question,answer=answer,probility=1)
     return response
 
   def train_and_get_classifer(self, data_filename):
@@ -72,22 +80,27 @@ class Glados(object):
   def train_using_decision_tree(self, training_data, test_data):
       # entropy_cutoff=0.1,support_cutoff=0.7 gives awesome results
       classifier = nltk.classify.DecisionTreeClassifier.train(training_data, entropy_cutoff=0.1,support_cutoff=0.7)
-      print(classifier)
+      # print(classifier)
+      print(classifier.pretty_format(width=70, prefix='', depth=4))
       classifier_name = type(classifier).__name__
       training_set_accuracy = nltk.classify.accuracy(classifier, training_data)
       test_set_accuracy = nltk.classify.accuracy(classifier, test_data)
       return classifier, classifier_name, test_set_accuracy, training_set_accuracy
 
-  # def train_using_SklearnClassifier(self, training_data, test_data):
-  #     classifier = SklearnClassifier(BernoulliNB()).train(training_data)
-  #     classifier.classify_many(test_data)
-  #     classifier2 = SklearnClassifier(SVC(), sparse=False).train(training_data)
-  #     classifier2.classify_many(test_data)
-  #     print(classifier)
-  #   classifier_name = type(classifier).__name__
-  #   training_set_accuracy = nltk.classify.accuracy(classifier, training_data)
-  #   test_set_accuracy = nltk.classify.accuracy(classifier, test_data)
-  #   return classifier, classifier_name, test_set_accuracy, training_set_accuracy
+  def train_using_SklearnClassifier(self, training_data, test_data):
+    #   Giving bad results. Don't use.
+    classifier = SklearnClassifier(BernoulliNB()).train(training_data)
+    classifier2 = SklearnClassifier(SVC(), sparse=False).train(training_data)
+    print(classifier)
+    classifier_name = type(classifier).__name__
+    training_set_accuracy = nltk.classify.accuracy(classifier, training_data)
+    training_set_accuracy2 = nltk.classify.accuracy(classifier2, training_data)
+    test_set_accuracy = nltk.classify.accuracy(classifier, test_data)
+    test_set_accuracy2 = nltk.classify.accuracy(classifier2, test_data)
+    print(">>>>>>>>")
+    print(training_set_accuracy, test_set_accuracy)
+    print(training_set_accuracy2, test_set_accuracy2)
+    return classifier, classifier_name, test_set_accuracy, training_set_accuracy
 
   def extract_feature_from_doc(self, document):
     features = []
@@ -98,12 +111,18 @@ class Glados(object):
     return features
 
   def extract_feature(self, text):
-    sentences = nltk.sent_tokenize(text)
-    words = [nltk.word_tokenize(sent) for sent in sentences]
+    words = self.preprocess(text)
     tags = [nltk.pos_tag(sent) for sent in words]
     sent_keys = self.extract_keys(tags)
     stemmed_words = [self.stemmer.stem(x) for x in sent_keys]
     return self.get_feature_set(stemmed_words)
+
+  def preprocess(self, sentence):
+    sentence = sentence.lower()
+    tokenizer = RegexpTokenizer(r'\w+')
+    tokens = tokenizer.tokenize(sentence)
+    filtered_words = [w for w in tokens if not w in stopwords.words('english')]
+    return " ".join(filtered_words)
 
   def extract_keys(self, sentences):
     sent_keys = []
