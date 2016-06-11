@@ -15,6 +15,10 @@ from flask_httpauth import HTTPBasicAuth
 from itsdangerous import (TimedJSONWebSignatureSerializer
                           as Serializer, BadSignature, SignatureExpired)
 
+from flask import Flask
+from flask_cors import CORS
+
+
 app = Flask(__name__, instance_relative_config=False)
 app.config.from_pyfile('application.cfg', silent=False)
 if os.environ.get('SKADOOSH_CORE_CONFIG', None):
@@ -134,6 +138,8 @@ def mjson(data, code, headers=None):
   resp.headers.extend(headers or {})
   return resp
 
+
+CORS(app)
 @app.route("/")
 def home():
   name = session.get('name', "Stranger")
