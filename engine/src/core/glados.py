@@ -11,7 +11,7 @@ module_path = os.path.abspath(os.path.join(CURR_PATH, '..'))
 sys.path.append(module_path)
 
 from core.utils import *
-
+# BEFORE DEPLOYING TRAIN ON ALL DATA
 class Glados(object):
   def __init__(self,data_filename=None):
     self.stemmer = SnowballStemmer("english")
@@ -32,7 +32,7 @@ class Glados(object):
     prob = self.classifier.prob_classify(features)
     response = dict(question=question,answer=answer,probility=prob.prob(answer))
     return response
-      
+
   def train_and_get_classifer(self, data_filename):
 
     split_ratio = 0.8
@@ -46,15 +46,11 @@ class Glados(object):
     training_data = data_set[:train_split]
     test_data = data_set[train_split:]
 
-    print(len(training_data))
-    print(len(test_data))
-
     log('\n'.join([str(x) for x in data_set]))
 
-    classifier = nltk.NaiveBayesClassifier.train(training_data)
-    classifier_name = type(classifier).__name__
-    training_set_accuracy = nltk.classify.accuracy(classifier, training_data)
-    test_set_accuracy = nltk.classify.accuracy(classifier, test_data)
+    classifier, classifier_name, test_set_accuracy, training_set_accuracy = self.train_using_naive_bayes(training_data, test_data)
+
+    
     # print(classifier.most_informative_features())
 
     output_file = open(os.path.join(CURR_PATH,"res/accuracy.txt"), "a")
@@ -62,6 +58,13 @@ class Glados(object):
     output_file.close()
 
     return classifier
+
+  def train_using_naive_bayes(self, training_data, test_data):
+      classifier = nltk.NaiveBayesClassifier.train(training_data)
+      classifier_name = type(classifier).__name__
+      training_set_accuracy = nltk.classify.accuracy(classifier, training_data)
+      test_set_accuracy = nltk.classify.accuracy(classifier, test_data)
+      return classifier, classifier_name, test_set_accuracy, training_set_accuracy
 
   def extract_feature_from_doc(self, document):
     features = []
