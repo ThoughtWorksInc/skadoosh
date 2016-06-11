@@ -3,9 +3,13 @@ import sys
 import os
 import csv
 import argparse
-from core.utils import *
+from nltk.stem.snowball import SnowballStemmer
 
 CURR_PATH = os.path.dirname(__file__)
+module_path = os.path.abspath(os.path.join(CURR_PATH, '..'))
+sys.path.append(module_path)
+
+from core.utils import *
 
 class Glados(object):
   def __init__(self,traning_filename=None,test_filename=None):
@@ -13,6 +17,7 @@ class Glados(object):
       traning_filename = os.path.join(CURR_PATH, 'res/training.txt')
     self.traning_filename = traning_filename
     self.test_filename = test_filename
+    self.stemmer = SnowballStemmer("english")
     self.classifier = self.train_and_get_classifer(traning_filename)
   
   """
@@ -40,17 +45,22 @@ class Glados(object):
 
   def extract_feature(self, text):
     sentences = nltk.sent_tokenize(text)
-    sentences = [nltk.word_tokenize(sent) for sent in sentences]
-    sentences = [nltk.pos_tag(sent) for sent in sentences]
-    return self.get_feature_set(sentences)
+    words = [nltk.word_tokenize(sent) for sent in sentences]
+    tags = [nltk.pos_tag(sent) for sent in words]
+    sent_keys = self.extract_keys(tags)
+    stemmed_words = [self.stemmer.stem(x) for x in sent_keys]
+    return self.get_feature_set(stemmed_words)
 
-  def get_feature_set(self, sentences):
+  def extract_keys(self, sentences):
     sent_keys = []
     for sent in sentences:
         keys = [x for (x,n) in sent if n=='NN' or n=='VBN']
         if len(keys) == 0:
           keys = [x for (x,n) in sent]
         sent_keys.extend(keys)
+    return sent_keys
+
+  def get_feature_set(self, sent_keys):
     return {'keywords': '|'.join(sent_keys)}
 
   def get_traning_content(self, filename):
@@ -81,10 +91,11 @@ if __name__ == '__main__':
   }
   
   glados = Glados()
-  ans = glados.classify('Tell my account balance.')
+  ans = glados.get_help('Tell my account balance.')
   if len(ans) > 0:
     print(ans % account_info)
   else:
     print("Unable to understand your request. Please try again")
   # print(classifier.show_most_informative_features(5))
+  print(glados.get_help('what different credit cards you provide?'))
   
