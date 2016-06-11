@@ -2,3 +2,9 @@ Classifier          TrainingDataCount TrainingAccuracy TestAccuracy
 
 NaiveBayesClassifier		27			0.96296296		0.96296296
 NaiveBayesClassifier		27			0.96296296		0.96296296
+NaiveBayesClassifier		43			0.25581395		0.33333333
+NaiveBayesClassifier		43			0.25581395		0.33333333
+NaiveBayesClassifier		43			0.25581395		0.33333333
+NaiveBayesClassifier		44			0.25000000		0.33333333
+NaiveBayesClassifier		44			0.25000000		0.33333333
+NaiveBayesClassifier		44			0.25000000		0.33333333

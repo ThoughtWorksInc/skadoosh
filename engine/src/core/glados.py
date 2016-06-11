@@ -88,7 +88,8 @@ class Glados(object):
     test_doc = os.path.join(filename)
     with open(test_doc, 'r') as content_file:
       lines = csv.reader(content_file,delimiter='|')
-      return [x for x in lines]
+      res = [x for x in lines if len(x) == 3]
+      return res
 
 DEBUG = False
 def log(msg):
