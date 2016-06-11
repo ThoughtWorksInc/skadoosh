@@ -6,11 +6,7 @@ Hi|Personal|Hello. How can I help you?
 Hi|Personal|Hello. How can I help you?
 Hi|Personal|Hello. How can I help you?
 How are you?|Personal|I'm fine! How are you?
-How are you?|Personal|I'm fine! How are you?
-How are you?|Personal|I'm fine! How are you?
 How are you|Personal|I'm fine! How are you?
-what is my name?|Personal|your name is %(name)s
-what is my name|Personal|your name is %(name)s
 what is my name?|Personal|your name is %(name)s
 tell me my name?|Personal|your name is %(name)s
 what is my name?|Personal|your name is %(name)s
@@ -19,8 +15,6 @@ what is my phone number?|Personal|your phone number is %(phone)s
 what is my phone number?|Personal|your phone number is %(phone)s
 what is my phone number|Personal|your phone number is %(phone)s
 what is your name?|Personal|I am Thalaiva. Zap Zoop Zap. B)
-what is your name?|Personal|I am Thalaiva. Zap Zoop Zap. B)
-what is your name|Personal|I am Thalaiva. Zap Zoop Zap. B)
 what is your name|Personal|I am Thalaiva. Zap Zoop Zap. B)
 who are you?|Personal|I am Thalaiva. Zap Zoop Zap. B)
 who are you?|Personal|I am Thalaiva. Zap Zoop Zap. B)
@@ -48,21 +42,15 @@ tell me my account balance?|Account|Your account balance is %(balance).2f
 tell me my account balance|Account|Your account balance is %(balance).2f
 
 What service do you provide?|Services|Credit cards, loan
-What services do you provide?|Services|Credit cards, loan
 What services do you provide|Services|Credit cards, loan
-What products do you provide?|Services|Credit cards, loan
 What products do you provide|Services|Credit cards, loan
-What product do you provide?|Services|Credit cards, loan
 What do you provide?|Services|Credit cards, loan
 
 How do I apply for a loan?|Loan|Kindly go through this link
-How do I apply for a loan|Loan|Kindly go through this link
 How to apply for a loan?|Loan|Kindly go through this link
 How do I apply for a car loan?|Loan|Kindly go through this link
-How do I apply for a car loan|Loan|Kindly go through this link
 How to apply for a car loan?|Loan|Kindly go through this link
 How do I apply for a home loan?|Loan|Kindly go through this link
-How do I apply for a home loan|Loan|Kindly go through this link
 How to apply for a home loan?|Loan|Kindly go through this link
 
 Do you provide credit cards?|credit_card|Yes.
@@ -91,6 +79,57 @@ Can you send me a reminder a week before my points expire|Rewards|You have %(rew
 Can you send me a reminder a week before my points expire?|Rewards|You have %(reward_points_expiring)s points that will expired by %(reward_points_expiring_on)s. Would you like to remind me by email, message or phone?
 Please remind me a week before my points expire|Rewards|You have %(reward_points_expiring)s points that will expired by %(reward_points_expiring_on)s. Would you like to remind me by email, message or phone?
 By email|Rewards|A reminder via email has been set.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+What are you sayng?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can somethingoints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I blahh my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Cants?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buoints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I bus?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Cy points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can ints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can ints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can ints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can ints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can ints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can Is?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Canets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+something?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+what?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+kya bolu?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+random|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+ ?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
 Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
 
 Where are you located?|General|USA
@@ -176,4 +215,16 @@ What is the limit to the number of transfers I can make from my Barclays account
 What is a Dream Account?|dream_account|It’s a special online savings account that awards you with bonuses for making smart savings decisions.
 Who can open a Dream Account?|dream_account|Any U.S. resident can open a Dream Account. Minor children (under 18 years old) will need to have a qualified joint account holder (over 18 years old) – a parent, grandparent, guardian or family friend, for example.
 What bonuses can I earn?|dream_account|When you make deposits each month for 6 consecutive months, you’ll earn a 2.5% bonus on the total interest earned over that time. Also, When you make no withdrawals over 6 consecutive months, you’ll earn a 2.5% bonus on interest you’ve earned over those months.
+What bonuses can I earn|dream_account|When you make deposits each month for 6 consecutive months, you’ll earn a 2.5% bonus on the total interest earned over that time.
+Is there a minimum deposit required?|dream_account|No – there is no minimum deposit required but the initial opening deposit cannot exceed $1,000.00.
+Is there a maximum monthly deposit?|dream_account|Yes, there is a maximum deposit of $1,000 in a calendar month, per account.
+How many Dream accounts can one person open?|dream_account|Any one individual can only open 3 Dream Accounts.
+
+What is my credit score?||Your credit score is 5.
+What was my last transactions?||Your last transaction was at Starbucks for $3.75.
+I had redeemed my points. What happened?||It is being processed.
+
+My statement says I made a transaction on the 10th of last month. I did not make any such transaction||If you are any of the authorised users haven't made this transaction then you could raise a dispute. You can learn more about the dispute process from this link.
+My card is stolen! What should I do?||You should immediately report it at this number.
+
 

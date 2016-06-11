@@ -11,7 +11,6 @@ from sklearn.svm import SVC
 import string
 from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import stopwords
-import re
 
 CURR_PATH = os.path.dirname(__file__)
 module_path = os.path.abspath(os.path.join(CURR_PATH, '..'))
@@ -81,7 +80,7 @@ class Glados(object):
       # entropy_cutoff=0.1,support_cutoff=0.7 gives awesome results
       classifier = nltk.classify.DecisionTreeClassifier.train(training_data, entropy_cutoff=0.1,support_cutoff=0.7)
       # print(classifier)
-      print(classifier.pretty_format(width=70, prefix='', depth=4))
+      # print(classifier.pretty_format(width=70, prefix='', depth=4))
       classifier_name = type(classifier).__name__
       training_set_accuracy = nltk.classify.accuracy(classifier, training_data)
       test_set_accuracy = nltk.classify.accuracy(classifier, test_data)

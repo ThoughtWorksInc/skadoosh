@@ -9,7 +9,7 @@ from core.utils import *
 help_agent = Glados()
 
 test_account_info = {
-  'name': 'John',
+  'name': 'Nikes',
   'balance': 323710.38,
   'account_no': 12900989124,
   'phone': 73710203,
