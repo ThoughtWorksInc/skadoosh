@@ -2,5 +2,6 @@
 dist/
 *.egg-info/
 *.cfg
-
+.idea/
 __pycache__/
+skadoosh.iml

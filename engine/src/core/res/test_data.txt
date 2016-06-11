@@ -1,0 +1,27 @@
+How are you?|personal|I'm fine sir. How you do?
+What's my account balance?|account_balance|Your account balance is %(balance).2f
+Is this Barclays bank?|general_bank|Yes, this is Barclays!
+Where are you located?|location|USA
+What service you provide?|services|Credit card loan
+What are the bank open timings?|general_bank| 8AM to 7 PM on all weekdays except public holidays.
+How do I apply for a loan?|loan|Kindly go through this link
+How do I apply for a car loan?|loan|Kindly go through this link
+How do I apply for a home loan?|loan|Kindly go through this link
+How do I apply for a account?|general_bank|Kindly go through this link
+How do I open an account?|general_bank|Kindly go through this link
+Do you provide credit cards?|credit_card|Yes sir, we provide credit cards.
+What type of credit cards you give?|credit_card|Silver, Gold, Platinum
+what is my name?|personal|your name is %(name)s
+tell me my account name?|personal|your name is %(name)s
+tell me my account number?|personal|your account nummber is %(account_no)s
+what is my account number?|personal|your account nummber is %(account_no)s
+what is my phone number?|personal|your phone nummber is %(phone)s
+How many points do I have?|Rewards|You have %(reward_points)s points.
+How many reward points do I have?|Rewards|You have %(reward_points)s points.
+What can I redeem these points for?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+I'll take the backpack|Rewards|Ok. You have choosen to redeem 450 points for a black backpack. Please confirm the same by saying Yes or Cancle by saying Cancel
+By when will the item be delivered?|Rewards|Your product should be delivered with 7 working days.
+When do my points expire?|Rewards|Your %(reward_points_expiring)s points expire on 15th September.
+Can you send me a reminder a week before my points expire?|Rewards|You have %(reward_points_expiring)s points that will expired by %(reward_points_expiring_on)s. Would you like to remind me by email, message or phone?
+By email|Rewards|A reminder via email has been set.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.

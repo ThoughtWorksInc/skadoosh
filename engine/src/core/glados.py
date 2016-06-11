@@ -15,10 +15,12 @@ class Glados(object):
   def __init__(self,traning_filename=None,test_filename=None):
     if isEmpty(traning_filename):
       traning_filename = os.path.join(CURR_PATH, 'res/training.txt')
+    if isEmpty(test_filename):
+      test_filename = os.path.join(CURR_PATH, 'res/test_data.txt')
     self.traning_filename = traning_filename
     self.test_filename = test_filename
     self.stemmer = SnowballStemmer("english")
-    self.classifier = self.train_and_get_classifer(traning_filename)
+    self.classifier = self.train_and_get_classifer(traning_filename, test_filename)
   
   """
   Public api
@@ -28,11 +30,26 @@ class Glados(object):
   def get_help(self, text):
       return self.classifier.classify(self.extract_feature(text))
       
-  def train_and_get_classifer(self, training_set_filename):
-    document = self.get_traning_content(training_set_filename)  
-    train_set = self.extract_feature_from_doc(document)
+  def train_and_get_classifer(self, training_set_filename, test_set_filename):
+    training_data = self.get_traning_content(training_set_filename)
+    train_set = self.extract_feature_from_doc(training_data)
+    training_data_length = len(training_data)
+
+    test_data = self.get_traning_content(test_set_filename)
+    test_set = self.extract_feature_from_doc(test_data)
+
     log('\n'.join([str(x) for x in train_set]))
+
     classifier = nltk.NaiveBayesClassifier.train(train_set)
+    classifier_name = type(classifier).__name__
+    training_set_accuracy = nltk.classify.accuracy(classifier, train_set)
+    test_set_accuracy = nltk.classify.accuracy(classifier, test_set)
+    # print(classifier.most_informative_features())
+
+    output_file = open(os.path.join(CURR_PATH,"res/accuracy.txt"), "a")
+    output_file.write("\n%s\t\t%s\t\t\t%.8f\t\t%.8f" % (classifier_name, training_data_length, training_set_accuracy, test_set_accuracy))
+    output_file.close()
+
     return classifier
     
   def extract_feature_from_doc(self, document):
