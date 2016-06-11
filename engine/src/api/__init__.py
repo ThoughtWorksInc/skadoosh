@@ -142,5 +142,7 @@ def home():
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 from api.resources.help import HelpApi
+from api.resources.analytics import AnalyticsApi
 
 api.add_resource(HelpApi, '/api/help')
+api.add_resource(AnalyticsApi, '/api/analytics')

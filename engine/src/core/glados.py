@@ -27,8 +27,12 @@ class Glados(object):
   input: user question text
   output: answer
   """
-  def get_help(self, text):
-      return self.classifier.classify(self.extract_feature(text))
+  def get_help(self, question):
+    features = self.extract_feature(question)
+    answer = self.classifier.classify(features)
+    prob = self.classifier.prob_classify(features)
+    response = dict(question=question,answer=answer,probility=prob.prob(answer))
+    return response
       
   def train_and_get_classifer(self, training_set_filename, test_set_filename):
     training_data = self.get_traning_content(training_set_filename)
