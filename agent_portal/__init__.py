@@ -82,7 +82,7 @@ def test_message(message):
                       ))
     print("*** Sending message '%s' to agent_response_queue" % message['data'])
     session['receive_count'] = session.get('receive_count', 0) + 1
-    emit('general_response',
+    emit('agent_echo',
          {'data': message['data'], 'count': session['receive_count']})
 
 @socketio.on('join', namespace=NAMESPACE)
