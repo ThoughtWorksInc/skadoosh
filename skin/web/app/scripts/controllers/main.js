@@ -27,6 +27,8 @@ angular.module('angularAppApp').controller('MainCtrl', function ($scope, $route,
         $scope.onMessage($scope.username +"  : "+question);
         $http.post("http://localhost:4000/api/help", {"text": question})
         .success(function(response, status) {
+                var utterance = new SpeechSynthesisUtterance(response.answer);
+                window.speechSynthesis.speak(utterance);
          $scope.onMessage("Agent  : " +response.answer);
      })
 

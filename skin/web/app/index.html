@@ -62,13 +62,41 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
-
+<script src="bower_components/annyang/annyang.min.js"></script>
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="lib/sockjs-0.3.min.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/services/api.js"></script>
 <!-- endbuild -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script>
+<script>
+  /*  if (annyang) {
+        // Let's define our first command. First the text we expect, and then the function it should call
+        var commands = {
+            'Hello': function() {
+                $("#smm").text("Done!!");
+                console.log("speech done");
+            }
+        };
+
+        // Add our commands to annyang
+        annyang.addCommands(commands);
+
+        // Tell KITT to use annyang
+        SpeechKITT.annyang();
+
+        // Define a stylesheet for KITT to use
+//        SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/themes/flat.css');
+
+        // Render KITT's interface
+//        SpeechKITT.vroom();
+
+        // Start listening. You can call this here, or attach this call to an event, button, etc.
+        annyang.start();
+    }*/
+
+</script>
 
 
 </body>
