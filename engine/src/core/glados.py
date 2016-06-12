@@ -8,7 +8,6 @@ import random
 from nltk.classify import SklearnClassifier
 from sklearn.naive_bayes import BernoulliNB
 from sklearn.svm import SVC
-import string
 from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import stopwords
 
@@ -35,12 +34,12 @@ class Glados(object):
   def get_help(self, question):
     features = self.extract_feature(question)
     answer = self.classifier.classify(features)
-    # prob = self.classifier.prob_classify(features)
+    prob = self.classifier.prob_classify(features).prob(answer)
     print("--------")
     print(features)
     print(features.values())
-    # print(dir(self.classifier.prob_classify(features)))
-    response = dict(question=question,answer=answer,probility=1)
+    print(self.classifier.prob_classify(features).prob(answer))
+    response = dict(question=question,answer=answer,probility=prob)
     return response
 
   def train_and_get_classifer(self, data_filename):
@@ -58,7 +57,7 @@ class Glados(object):
 
     log('\n'.join([str(x) for x in data_set]))
 
-    classifier, classifier_name, test_set_accuracy, training_set_accuracy = self.train_using_decision_tree(training_data, test_data)
+    classifier, classifier_name, test_set_accuracy, training_set_accuracy = self.train_using_max_entropy(training_data, test_data)
 
 
     # print(classifier.most_informative_features())
@@ -85,6 +84,14 @@ class Glados(object):
       training_set_accuracy = nltk.classify.accuracy(classifier, training_data)
       test_set_accuracy = nltk.classify.accuracy(classifier, test_data)
       return classifier, classifier_name, test_set_accuracy, training_set_accuracy
+
+  def train_using_max_entropy(self, training_data, test_data):
+    classifier = nltk.maxent.ConditionalExponentialClassifier.train(training_data)
+    classifier_name = type(classifier).__name__
+    training_set_accuracy = nltk.classify.accuracy(classifier, training_data)
+    test_set_accuracy = nltk.classify.accuracy(classifier, test_data)
+    return classifier, classifier_name, test_set_accuracy, training_set_accuracy
+
 
   def train_using_SklearnClassifier(self, training_data, test_data):
     #   Giving bad results. Don't use.
@@ -171,3 +178,4 @@ if __name__ == '__main__':
     print("Unable to understand your request. Please try again")
   # print(classifier.show_most_informative_features(5))
   print(glados.get_help('what different credit cards you provide?'))
+
