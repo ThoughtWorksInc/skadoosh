@@ -7,6 +7,7 @@ import pika
 from api import auth, mongo
 from core.glados import Glados
 from core.utils import *
+import os
 
 help_agent = Glados()
 
@@ -55,6 +56,7 @@ class HelpApi(Resource):
     
   # method_decorators = [auth.login_required]
   def post(self):
+    CURR_PATH = os.path.dirname(__file__)
     args = parser.parse_args()
     input_text = args['text']
     if isEmpty(input_text):
@@ -88,6 +90,9 @@ class HelpApi(Resource):
             break
         ans['agent_response'] = agent_response_body
         print("Agent response %s" % agent_response_body)
+        output_file = open(os.path.join(CURR_PATH,"../../core/res/rewards.txt"), "a")
+        output_file.write("\n%s||%s" % (ans['question'],  agent_response_body))
+        output_file.close()
       except Exception as e:
         print(e)
     self.save(ans)

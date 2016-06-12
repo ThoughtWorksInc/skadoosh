@@ -37,10 +37,10 @@ class Glados(object):
     features = self.extract_feature(question)
     answer = self.classifier.classify(features)
     prob = self.classifier.prob_classify(features).prob(answer)
-    print("--------")
-    print(features)
-    print(features.values())
-    print(self.classifier.prob_classify(features).prob(answer))
+    # print("--------")
+    # print(features)
+    # print(features.values())
+    # print(self.classifier.prob_classify(features).prob(answer))
     response = dict(question=question,answer=answer,probility=prob)
     return response
 
@@ -142,7 +142,7 @@ class Glados(object):
     return sent_keys
 
   def get_feature_set(self, sent_keys):
-    return {'keywords': '|'.join(sent_keys)}
+    return {'keywords': ''.join(sent_keys)}
 
   def get_content(self, filename):
     test_doc = os.path.join(filename)
