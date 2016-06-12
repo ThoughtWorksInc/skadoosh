@@ -1,0 +1,117 @@
+Hello|Personal|Hi. How can I help you?
+Hello|Personal|Hi. How can I help you?
+Hello|Personal|Hi. How can I help you?
+Hi|Personal|Hello. How can I help you?
+Hi|Personal|Hello. How can I help you?
+Hi|Personal|Hello. How can I help you?
+Hi|Personal|Hello. How can I help you?
+How are you?|Personal|I'm fine! How are you?
+How are you|Personal|I'm fine! How are you?
+what is my name?|Personal|your name is %(name)s
+tell me my name?|Personal|your name is %(name)s
+what is my name?|Personal|your name is %(name)s
+what is my phone number?|Personal|your phone number is %(phone)s
+what is my phone number?|Personal|your phone number is %(phone)s
+what is my phone number?|Personal|your phone number is %(phone)s
+what is my phone number|Personal|your phone number is %(phone)s
+what is your name?|Personal|I am Thalaiva. Zap Zoop Zap. B)
+what is your name|Personal|I am Thalaiva. Zap Zoop Zap. B)
+who are you?|Personal|I am Thalaiva. Zap Zoop Zap. B)
+who are you?|Personal|I am Thalaiva. Zap Zoop Zap. B)
+who are you|Personal|I am Thalaiva. Zap Zoop Zap. B)
+why are you here?|Personal|I'm here to assist you in your banking quest.
+why are you here|Personal|I'm here to assist you in your banking quest.
+why are you here?|Personal|I'm here to assist you in your banking quest.
+
+Awesome|No_response|
+Awesome!|No_response|
+Thank you!||You're welcome.
+Thank you||You're welcome.
+Bye||Bye
+
+How many points do I have?|Rewards|You have %(reward_points)s points.
+How many points do I have?|Rewards|You have %(reward_points)s points.
+How many points do I have|Rewards|You have %(reward_points)s points.
+How many reward points do I have?|Rewards|You have %(reward_points)s points.
+How many reward points do I have|Rewards|You have %(reward_points)s points.
+What can I redeem these points for?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+What can I redeem my points for|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+I'll take the backpack|Rewards|Ok. You have chosen to redeem 450 points for a black backpack. Please confirm the same by saying Yes or Cancel by saying Cancel
+I'll take the sunglasses|Rewards|Ok. You have chosen to redeem 375 points for sunglasses. Please confirm the same by saying Yes or Cancel by saying Cancel
+I'll give it to charity|Rewards|That is very generous of you. You have chosen to donate your points to charity. Please confirm the same by saying Yes or Cancel by saying Cancel
+By when will the item be delivered?|Rewards|Your product should be delivered with 7 working days.
+By when will the item be delivered|Rewards|Your product should be delivered with 7 working days.
+By when will it be delivered?|Rewards|Your product should be delivered with 7 working days.
+When do my points expire?|Rewards|Your %(reward_points_expiring)s points expire on 15th September.
+When do my points expire|Rewards|Your %(reward_points_expiring)s points expire on 15th September.
+When do my reward points expire?|Rewards|Your %(reward_points_expiring)s points expire on 15th September.
+When do my reward points expire|Rewards|Your %(reward_points_expiring)s points expire on 15th September.
+Can you send me a reminder a week before my points expire|Rewards|You have %(reward_points_expiring)s points that will expired by %(reward_points_expiring_on)s. Would you like to remind me by email, message or phone?
+Can you send me a reminder a week before my points expire?|Rewards|You have %(reward_points_expiring)s points that will expired by %(reward_points_expiring_on)s. Would you like to remind me by email, message or phone?
+Please remind me a week before my points expire|Rewards|You have %(reward_points_expiring)s points that will expired by %(reward_points_expiring_on)s. Would you like to remind me by email, message or phone?
+By email|Rewards|A reminder via email has been set.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+What are you sayng?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can somethingoints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I blahh my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Cants?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buoints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I bus?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Cy points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can ints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can ints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can ints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can ints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can ints?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can Is?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Canets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+something?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+what?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+kya bolu?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+random|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+ ?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
+How do I redeem Barclaycard Freedom Rewards points for vouchers?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+How do I redeem Rewards points for vouchers?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+How do I redeem Rewards points?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+How do I redeem Reward points?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+How do I redeem Reward point?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+redeem Reward point?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+redeem Reward point|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+redeem Reward points|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+redeem Rewards|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+How do I redeem Rewards points|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+How Can I redeem Rewards points?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+How to redeem Rewards points?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+Can you help me redeeming Rewards points?|Rewards|Sure, You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+How may I redeem Rewards points?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+How should I redeem Rewards points?|Rewards| You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+How should I redeem Rewards points?|Rewards| You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+Can I club the reward points across multiple cards or transfer the points from one card account to another?|Rewards|Sorry, this cannot be done. Rewards redemption can only be done against the card on which the reward points were accrued.
+Do reward points accrued on my card expire?|Rewards|Reward points accrued on your Barclaycard lifeline card are evergreen and don't expire. For Cobrand Cards like First Jet blue Card, please visit the partner website for the applicable terms & conditions governing expiry of points.
+Can I redeem reward points once the card is closed?|Rewards|Sorry, the reward points cannot be redeemed when the card is closed.
+What is there for which I can redeem these points?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
+How Freedom Rewards works?|Rewards|We've made Barclaycard Freedom Rewards really easy to use. Simply collect Freedom points everywhere and turn them into Freedom Rewards vouchers which you can spend at our huge range of Freedom Partners.
+what are the benefits of Freedom Rewards ?|Rewards|We've made Barclaycard Freedom Rewards really easy to use. Simply collect Freedom points everywhere and turn them into Freedom Rewards vouchers which you can spend at our huge range of Freedom Partners.
+How does Points add up in my credit card?|Rewards|Whatever you buy, wherever you buy it - home or abroad*, you'll collect Freedom points. Rewards start from just 1,750 Freedom points for a $5 Freedom Rewards voucher
+who are Freedom Partners of barclaycard?|Rewards|Barclaycard has tie up with near around 50 high street freedom partners including amazon, Marks and spencer and so on. You will be able to see the list of partners on the link https://www.barclaycard.co.uk/freedomrewards/all-freedom-partners.html
+I had redeemed my points. What happened?|Rewards|It is being processed.

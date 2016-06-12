@@ -19,9 +19,11 @@ from core.utils import *
 # BEFORE DEPLOYING TRAIN ON ALL DATA
 class Glados(object):
   def __init__(self,data_filename=None):
+    # file_to_train = 'res/training.txt'
+    file_to_train = 'res/rewards.txt'
     self.stemmer = SnowballStemmer("english")
     if isEmpty(data_filename):
-      data_filename = os.path.join(CURR_PATH, 'res/training.txt')
+      data_filename = os.path.join(CURR_PATH, file_to_train)
 
     self.data_filename = data_filename
     self.classifier = self.train_and_get_classifer(data_filename)
@@ -35,10 +37,10 @@ class Glados(object):
     features = self.extract_feature(question)
     answer = self.classifier.classify(features)
     prob = self.classifier.prob_classify(features).prob(answer)
-    print("--------")
-    print(features)
-    print(features.values())
-    print(self.classifier.prob_classify(features).prob(answer))
+    # print("--------")
+    # print(features)
+    # print(features.values())
+    # print(self.classifier.prob_classify(features).prob(answer))
     response = dict(question=question,answer=answer,probility=prob)
     return response
 
@@ -140,7 +142,7 @@ class Glados(object):
     return sent_keys
 
   def get_feature_set(self, sent_keys):
-    return {'keywords': '|'.join(sent_keys)}
+    return {'keywords': ''.join(sent_keys)}
 
   def get_content(self, filename):
     test_doc = os.path.join(filename)
