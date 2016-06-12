@@ -25,7 +25,7 @@ parser = reqparse.RequestParser()
 parser.add_argument('text',required=False,type=str)
 
 agent_response_body = None
-
+data_filename = "../../core/res/rewards.txt"
 connection = pika.BlockingConnection(pika.ConnectionParameters(
             host='localhost'))
 
@@ -61,7 +61,8 @@ class HelpApi(Resource):
     input_text = args['text']
     if isEmpty(input_text):
       return "You said nothing!! What's up? Are you okay?"
-      
+
+    global help_agent
     ans = help_agent.get_help(input_text)
     answer = ans['answer']
     if isEmpty(answer):
@@ -88,11 +89,19 @@ class HelpApi(Resource):
           count = count + 1
           if count > 10:
             break
-        ans['agent_response'] = agent_response_body
+
+        if agent_response_body is None:
+          ans['answer'] = "I'm sorry I do not know the answer to this at the moment. I will email a response to you within 24 hours."
+          ans['agent_response'] = None
+        else:
+          ans['agent_response'] = agent_response_body
+          output_file = open(os.path.join(CURR_PATH, data_filename), "a")
+          output_file.write("\n%s||%s" % (ans['question'],  agent_response_body))
+          output_file.close()
+          help_agent = Glados()
+
         print("Agent response %s" % agent_response_body)
-        output_file = open(os.path.join(CURR_PATH,"../../core/res/rewards.txt"), "a")
-        output_file.write("\n%s||%s" % (ans['question'],  agent_response_body))
-        output_file.close()
+
       except Exception as e:
         print(e)
     self.save(ans)
