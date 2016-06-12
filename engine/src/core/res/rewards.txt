@@ -36,7 +36,9 @@ How many reward points do I have?|Rewards|You have %(reward_points)s points.
 How many reward points do I have|Rewards|You have %(reward_points)s points.
 What can I redeem these points for?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
 What can I redeem my points for|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
-I'll take the backpack|Rewards|Ok. You have chosen to redeem 450 points for a black backpack. Please confirm the same by saying Yes or Cancle by saying Cancel
+I'll take the backpack|Rewards|Ok. You have chosen to redeem 450 points for a black backpack. Please confirm the same by saying Yes or Cancel by saying Cancel
+I'll take the sunglasses|Rewards|Ok. You have chosen to redeem 375 points for sunglasses. Please confirm the same by saying Yes or Cancel by saying Cancel
+I'll give it to charity|Rewards|That is very generous of you. You have chosen to donate your points to charity. Please confirm the same by saying Yes or Cancel by saying Cancel
 By when will the item be delivered?|Rewards|Your product should be delivered with 7 working days.
 By when will the item be delivered|Rewards|Your product should be delivered with 7 working days.
 By when will it be delivered?|Rewards|Your product should be delivered with 7 working days.
@@ -88,18 +90,6 @@ Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the ans
 Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
 Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
 Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
-Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
-Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
-Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
-Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
-Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
-Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
-Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
-Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
-Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
-Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
-Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
-Can I buy flight tickets with my points?|Rewards|I'm sorry I do not know the answer to this. Give me some time to find out and I will email the response to you.
 How do I redeem Barclaycard Freedom Rewards points for vouchers?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
 How do I redeem Rewards points for vouchers?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
 How do I redeem Rewards points?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
@@ -122,5 +112,6 @@ Can I redeem reward points once the card is closed?|Rewards|Sorry, the reward po
 What is there for which I can redeem these points?|Rewards|You can redeem your points for any of the following items: backpack for 450 points, sunglasses for 375 points. You could also choose to donate the points for charity.
 How Freedom Rewards works?|Rewards|We've made Barclaycard Freedom Rewards really easy to use. Simply collect Freedom points everywhere and turn them into Freedom Rewards vouchers which you can spend at our huge range of Freedom Partners.
 what are the benefits of Freedom Rewards ?|Rewards|We've made Barclaycard Freedom Rewards really easy to use. Simply collect Freedom points everywhere and turn them into Freedom Rewards vouchers which you can spend at our huge range of Freedom Partners.
-How does Points add up in my credit card?|Rewards|Whatever you buy, wherever you buy it – home or abroad*, you'll collect Freedom points. Rewards start from just 1,750 Freedom points for a £5 Freedom Rewards voucher
+How does Points add up in my credit card?|Rewards|Whatever you buy, wherever you buy it - home or abroad*, you'll collect Freedom points. Rewards start from just 1,750 Freedom points for a £5 Freedom Rewards voucher
 who are Freedom Partners of barclaycard?|Rewards|Barclaycard has tie up with near around 50 high street freedom partners including amazon, Marks and spencer and so on. You will be able to see the list of partners on the link https://www.barclaycard.co.uk/freedomrewards/all-freedom-partners.html
+I had redeemed my points. What happened?|Rewards|It is being processed.
