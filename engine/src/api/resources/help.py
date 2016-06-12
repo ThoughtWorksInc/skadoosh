@@ -67,28 +67,29 @@ class HelpApi(Resource):
     ans['answer'] = self.apply_context(ans['answer'])
     ans['timestamp'] = get_timestamp()
     
-    message = json.dumps(ans)
-    try:
-      global agent_response_body, connection
-      agent_response_body = None
-      self.channel.basic_publish(exchange='',
-                        routing_key='task_queue',
-                        body=message,
-                        properties=pika.BasicProperties(
-                          delivery_mode = 2, # make message persistent
-                        ))
-      print("[x] Sending message to queue")
-      count = 0
-      while agent_response_body is None:
-        connection.process_data_events()
-        time.sleep(2)
-        count = count + 1
-        if count > 10:
-          break
-      ans['agent_response'] = agent_response_body
-      print("Agent response %s" % agent_response_body)
-    except Exception as e:
-      print(e)
+    if ans['probility'] < 0.2:
+      message = json.dumps(ans)
+      try:
+        global agent_response_body, connection
+        agent_response_body = None
+        self.channel.basic_publish(exchange='',
+                          routing_key='task_queue',
+                          body=message,
+                          properties=pika.BasicProperties(
+                            delivery_mode = 2, # make message persistent
+                          ))
+        print("[x] Sending message to queue")
+        count = 0
+        while agent_response_body is None:
+          connection.process_data_events()
+          time.sleep(2)
+          count = count + 1
+          if count > 10:
+            break
+        ans['agent_response'] = agent_response_body
+        print("Agent response %s" % agent_response_body)
+      except Exception as e:
+        print(e)
     self.save(ans)
     return ans
     
