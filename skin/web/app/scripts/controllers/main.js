@@ -27,9 +27,15 @@ angular.module('angularAppApp').controller('MainCtrl', function ($scope, $route,
         $scope.onMessage($scope.username +"  : "+question);
         $http.post("http://localhost:4000/api/help", {"text": question})
         .success(function(response, status) {
-                var utterance = new SpeechSynthesisUtterance(response.answer);
-                window.speechSynthesis.speak(utterance);
-         $scope.onMessage("Agent  : " +response.answer);
+         if(response.agent_response){
+             $scope.onMessage("Agent  : " +response.agent_response);
+             var utterance = new SpeechSynthesisUtterance(response.agent_response);
+             window.speechSynthesis.speak(utterance);
+         }else{
+             $scope.onMessage("Agent  : " +response.answer);
+             var utterance = new SpeechSynthesisUtterance(response.answer);
+             window.speechSynthesis.speak(utterance);
+         }
      })
 
     };
