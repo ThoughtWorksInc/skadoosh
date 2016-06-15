@@ -95,6 +95,7 @@ class HelpApi(Resource):
           ans['agent_response'] = None
         else:
           ans['agent_response'] = agent_response_body
+          ans['answer'] = agent_response_body
           output_file = open(os.path.join(CURR_PATH, data_filename), "a")
           output_file.write("\n%s||%s" % (ans['question'],  agent_response_body))
           output_file.close()
